@@ -25,14 +25,13 @@ zin_list = zinnen.split(".")
 
 # opdracht: hoeveel woorden per zin
 
-# f = open("test.txt", "w")
+for zin in zin_list:
+    if zin != "":
+        zin = zin.strip()
+        print(zin.count(" ")+1)
+    else:
+        print("lege zin")
 
-# f.close()
 
-"""
-Geachte heer/mevrouw ,
-Hierbij uw brief. 
-Groetjes,
-Stijn
-"""
+
 
