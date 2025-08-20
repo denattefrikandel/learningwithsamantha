@@ -20,18 +20,32 @@
 
 # print(type(naam))
 
-zinnen = "Samantha was vandaag een beetje ziek. Toen ging Stijn dansen. Nu is alles weer goed."
-zin_list = zinnen.split(".")
+# zinnen = "Samantha was vandaag een beetje ziek. Toen ging Stijn dansen. Nu is alles weer goed."
+# zin_list = zinnen.split(".")
 
 # opdracht: hoeveel woorden per zin
 
-for zin in zin_list:
-    if zin != "":
-        zin = zin.strip()
-        print(zin.count(" ")+1)
-    else:
-        print("lege zin")
+# f = open("test.txt", "w")
 
+# f.close()
 
+# for index in range(0, len(lines)):
+#     print(index, '-', lines[index])
 
+with open("test_stijn.txt", "r") as f:
+    lines:list = f.readlines()
 
+for item in lines:
+    item:str = item.replace("\n", "")
+
+    text = f"""Geachte heer/mevrouw {item},
+Hierbij uw brief. 
+Groetjes,
+Stijn"""
+
+    # brief_saige_fuentes.txt
+    name = item.replace(" ", "_").casefold() #saige_fuentes
+    filename = f"brief_{name}.txt"
+
+    with open(filename, "w") as f:
+        print(text)
